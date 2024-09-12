@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <header>Header</header>
+        {/* <header>Header</header> */}
         <main>
           <img src={lotrBackground} alt="lotr-background-img" className="bg-image" />
           <Dashboard />

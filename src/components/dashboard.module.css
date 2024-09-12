@@ -7,3 +7,9 @@
   position: relative;
   flex: 1;
 }
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

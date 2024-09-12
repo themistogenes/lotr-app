@@ -7,10 +7,8 @@ export default function Options({ selection, setSelection }) {
     'book'
   ]
 
-  console.log('SELECTION: ', selection);
-
   return (
-    <>
+    <div>
       {
         questions.map((question, index) => {
           return (
@@ -24,6 +22,6 @@ export default function Options({ selection, setSelection }) {
           )
         })
       }
-    </>
+    </div>
   )
 }
