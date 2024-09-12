@@ -33,7 +33,7 @@ export default function useFetchData(selection) {
     }
 
     fetchData();
-  }, [])
+  }, [selection])
 
   return {data, error, loading}
 }
