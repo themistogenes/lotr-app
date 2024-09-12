@@ -1,10 +1,9 @@
 .dashboard {
   display: grid;
   place-items: center;
-  /* flex-direction: column; */
   /* overflow: scroll; */
   color: white;
   z-index: 50;
   position: relative;
-  color: white;
+  flex: 1;
 }
