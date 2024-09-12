@@ -6,11 +6,12 @@ export default function useFetchData(selection) {
   const [error, setError] = useState(null);
 
   const apiUrl = 'https://the-one-api.dev/v2';
-  const APITOKEN = import.meta.env.API_KEY;
-
-  const headers = {
-    'Accept': 'application/json',
-    'Authorization': `Bearer ${APITOKEN}`
+  const APITOKEN = import.meta.env.VITE_API_KEY;
+  let options = {
+    headers: {
+      'method': 'GET',
+      'Authorization': `Bearer ${APITOKEN}`
+    }
   }
 
   useEffect(() => {
@@ -19,9 +20,9 @@ export default function useFetchData(selection) {
     }
     
     async function fetchData() {
-      const url = apiUrl + '/' + 'book';
+      const url = apiUrl + '/' + selection;
       try {
-        const res = await fetch(url, {headers: headers});
+        const res = await fetch(url, options);
         const jsonData = await res.json();
         console.log('DATA: ', jsonData);
         setData(data);
