@@ -32,7 +32,7 @@ export default function Dashboard() {
           loading && <Loader />
         }
         { 
-          (data && !loading) && dataRender[selection]
+          (data && !loading) && dataRender[selection] // this is not rendering for some reason
         }
       </div>
     </div>
