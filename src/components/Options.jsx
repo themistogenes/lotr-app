@@ -8,7 +8,7 @@ export default function Options({ selection, setSelection }) {
   ]
 
   return (
-    <div>
+    <div className={styles.buttonContainer}>
       {
         questions.map((question, index) => {
           return (
