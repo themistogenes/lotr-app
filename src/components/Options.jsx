@@ -15,7 +15,7 @@ export default function Options({ selection, setSelection }) {
         questions.map((question, index) => {
           return (
             <button
-              className={styles.button} 
+              className={`${styles.button} ${question === selection ? styles.selectedButton : styles.nonSelectedButton}`} 
               key={index}
               onClick={setSelection(question)}
             >
