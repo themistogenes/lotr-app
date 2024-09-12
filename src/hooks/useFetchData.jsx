@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export default function useFetchData() {
+export default function useFetchData(selection) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -14,6 +14,10 @@ export default function useFetchData() {
   }
 
   useEffect(() => {
+    if (!selection) {
+      return;
+    }
+    
     async function fetchData() {
       const url = apiUrl + '/' + 'book';
       try {
